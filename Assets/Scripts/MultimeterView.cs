@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -14,10 +12,10 @@ public class MultimeterView : MonoBehaviour
 
     public void UpdateMode(MultimeterMode mode)
     {
-        _voltageValueText.text = "V =";
-        _amperageValueText.text = "V =";
-        _aCVoltageValueText.text = "V =";
-        _resistanceValueText.text = "V =";
+        _voltageValueText.text = "V = 0";
+        _amperageValueText.text = "A = 0";
+        _aCVoltageValueText.text = "~V = 0";
+        _resistanceValueText.text = "Ω = 0";
 
         switch (mode)
         {
