@@ -9,6 +9,10 @@ public class MultimeterController : MonoBehaviour
     [SerializeField] private MultimeterModel model;
     [SerializeField] private MultimeterView view;
 
+    [SerializeField] private Material _wheelMaterial;
+    [SerializeField] private Material _selectedWheelMaterial;
+
+
     [SerializeField] private float _power = 400f;
     [SerializeField] private float _resistance = 1000f;
 
@@ -18,19 +22,22 @@ public class MultimeterController : MonoBehaviour
 
     private void Start()
     {
-        //_scrollAngleStep = 360f / Enum.GetValues(typeof(MultimeterMode)).Length;
+        _scrollAngleStep = 360f / Enum.GetValues(typeof(MultimeterMode)).Length;
+        gameObject.GetComponent<MeshRenderer>().material = _wheelMaterial;
         model.SetValues(_power, _resistance);
     }
 
     private void OnMouseEnter()
     {
         _isWheelSelect = true;
+        gameObject.GetComponent<MeshRenderer>().material = _selectedWheelMaterial;
         ActionTriggerActive += UpdateDisplayValues;
     }
 
     private void OnMouseExit()
     {
         _isWheelSelect = false;
+        gameObject.GetComponent<MeshRenderer>().material = _wheelMaterial;
         ActionTriggerActive -= UpdateDisplayValues;
     }
 

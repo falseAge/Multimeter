@@ -1236,9 +1236,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 122389423559461587, guid: 03ba18ba1e5f8e242b3b73c17c045def, type: 3}
     - target: {fileID: -3575265485458724289, guid: 03ba18ba1e5f8e242b3b73c17c045def, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3575265485458724289, guid: 03ba18ba1e5f8e242b3b73c17c045def, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3575265485458724289, guid: 03ba18ba1e5f8e242b3b73c17c045def, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3575265485458724289, guid: 03ba18ba1e5f8e242b3b73c17c045def, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 69e578899813f7f4ca9e8c4bbc9db4ca, type: 2}
+    - target: {fileID: -3575265485458724289, guid: 03ba18ba1e5f8e242b3b73c17c045def, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2f39a24446708e94b85d101e9925ff59, type: 2}
     - target: {fileID: -535160638970534669, guid: 03ba18ba1e5f8e242b3b73c17c045def, type: 3}
       propertyPath: m_Name
       value: wheel
@@ -1364,7 +1380,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 2002269555}
   view: {fileID: 1887176575}
-  _highlight: {fileID: 0}
+  _wheelMaterial: {fileID: 2100000, guid: 69e578899813f7f4ca9e8c4bbc9db4ca, type: 2}
+  _selectedWheelMaterial: {fileID: 2100000, guid: 2f39a24446708e94b85d101e9925ff59, type: 2}
   _power: 400
   _resistance: 1000
 --- !u!64 &998556290
@@ -1887,7 +1904,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: acV
+  m_text: ~V
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
